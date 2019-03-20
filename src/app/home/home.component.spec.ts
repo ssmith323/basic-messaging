@@ -29,4 +29,8 @@ describe('HomeComponent', () => {
   it('should have an input page', () => {
     expect(fixture.debugElement.query(By.css('input#messageInput'))).toBeTruthy();
   });
+
+  it('should have a submit button', () => {
+    expect(fixture.debugElement.query(By.css('button#submit"'))).toBeTruthy();
+  });
 });
