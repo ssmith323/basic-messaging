@@ -31,6 +31,6 @@ describe('HomeComponent', () => {
   });
 
   it('should have a submit button', () => {
-    expect(fixture.debugElement.query(By.css('button#submit"'))).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('button#submit'))).toBeTruthy();
   });
 });
