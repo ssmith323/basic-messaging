@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "angular.ng-template",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "formulahendry.auto-rename-tag",
+    "alexkrechik.cucumberautocomplete",
+    "editorconfig.editorconfig",
+    "rbbit.typescript-hero",
+    "yzhang.markdown-all-in-one"
+  ]
+}
