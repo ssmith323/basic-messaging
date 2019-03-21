@@ -1,14 +1,19 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessageService {
 
-  constructor() { }
+  baseUrl = `${environment.api}/message`;
 
-  create(message: Message): any {
+  constructor(private http: HttpClient) { }
 
+  create(message: Message): Promise<Message> {
+    return this.http.post<Message>(this.baseUrl, message).toPromise();
   }
 }
 
