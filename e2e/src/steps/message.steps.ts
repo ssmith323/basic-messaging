@@ -14,24 +14,24 @@ Before(() => {
   elements = new Elements();
 });
 
-Given('I successfully entered "{string}"', async (message: string) => {
+Given('I successfully entered {string}', { timeout: 2 * 5000 }, async (message: string) => {
   browser.get('/');
   forms.inputText('#messageInput', message);
 });
 
-When('I enter "{string}"', async (message: string) => {
-  forms.inputText('#messageInput', message);
+When('I enter {string}', { timeout: 2 * 5000 }, async (message: string) => {
+  return forms.inputText('#messageInput', message);
 });
 
-When('click "{string}"', async (button: string) => {
-  forms.clickButton(`#${button.toLowerCase()}`);
+When('click {string}', { timeout: 2 * 5000 }, async (button: string) => {
+  return forms.clickButton(`#${button.toLowerCase()}`);
 });
 
-Then('I should be taken to the confirmation page', async () => {
-  expect(browser.getCurrentUrl).to.contains('success');
+Then('I should be taken to the confirmation page', { timeout: 2 * 5000 }, async () => {
+  expect(await browser.getCurrentUrl()).to.contains('success');
 });
 
 
-Then('I should see an error message', async () => {
+Then('I should see an error message', { timeout: 2 * 5000 }, async () => {
   expect(await elements.getElementsText('error')).to.be('Error');
 });

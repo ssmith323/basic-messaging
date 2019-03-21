@@ -17,7 +17,6 @@ export class MessageService {
   }
 }
 
-
 export interface Message {
   id?: number;
   message: string;
