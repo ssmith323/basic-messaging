@@ -4,9 +4,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MessageService {
-  create(message: any): any {
-    throw new Error('Method not implemented.');
-  }
 
   constructor() { }
+
+  create(message: Message): any {
+
+  }
+}
+
+
+export interface Message {
+  id?: number;
+  message: string;
 }

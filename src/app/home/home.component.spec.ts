@@ -3,7 +3,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { MessageService } from '../shared/message.service';
+import { Message, MessageService } from '../shared/message.service';
 import { HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {
@@ -53,7 +53,7 @@ describe('HomeComponent', () => {
     fixture.debugElement.query(By.css('button#submit')).nativeElement.click();
 
     // then
-    expect(mockMessageService.create).toHaveBeenCalledWith('Hi');
+    expect(mockMessageService.create).toHaveBeenCalledWith({ message: 'Hi' } as Message);
     fixture.whenStable().then(() => {
       fixture.detectChanges();
       expect(navigateSpy).toHaveBeenCalledWith(['/success']);

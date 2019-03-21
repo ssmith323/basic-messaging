@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   }
 
   submit() {
-    this.messageService.create(this.messageForm.value.message)
+    this.messageService.create(this.messageForm.value)
       .then(() => this.router.navigate(['/success']));
   }
 
