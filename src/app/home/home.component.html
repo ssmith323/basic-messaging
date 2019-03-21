@@ -1,2 +1,4 @@
-<input id="messageInput">
-<button id="submit" type="submit">Submit</button>
+<form [formGroup]="messageForm" (submit)="submit()">
+  <input id="messageInput">
+  <button id="submit" type="submit">Submit</button>
+</form>

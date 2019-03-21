@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+
+import { MessageService } from '../shared/message.service';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +10,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  messageForm: any;
+  messageForm: FormGroup;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private fb: FormBuilder, private messageService: MessageService) { }
 
   ngOnInit() {
+    this.messageForm = this.fb.group({
+      message: ['']
+    });
+  }
+
+  submit() {
+    this.messageService.create(this.messageForm.value.message)
+      .then(() => this.router.navigate(['/success']));
   }
 
 }

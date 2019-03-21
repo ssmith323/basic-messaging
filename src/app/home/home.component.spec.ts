@@ -43,10 +43,20 @@ describe('HomeComponent', () => {
   });
 
   it('should save the message when submit is clicked', () => {
+    // given
     const navigateSpy = spyOn((component as any).router, 'navigate');
-    component.messageForm.message = 'Hi';
-    fixture.debugElement.query(By.css('button#submit')).triggerEventHandler('click', null);
+
+    mockMessageService.create.and.returnValue(Promise.resolve(null));
+    component.messageForm.setValue({ message: 'Hi' });
+
+    // when
+    fixture.debugElement.query(By.css('button#submit')).nativeElement.click();
+
+    // then
     expect(mockMessageService.create).toHaveBeenCalledWith('Hi');
-    expect(navigateSpy).toHaveBeenCalledWith(['/success']);
+    fixture.whenStable().then(() => {
+      fixture.detectChanges();
+      expect(navigateSpy).toHaveBeenCalledWith(['/success']);
+    });
   });
 });
