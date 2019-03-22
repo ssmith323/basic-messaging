@@ -2,26 +2,55 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.4.
 
-## Development server
+## About
+This repo is made to provide a high level overview of TDD and BDD of an Angular application.  Each step below shows one process of development from writing the E2E tests to writing the unittests and fixing them.  The checkout a paticular branch run the following command:
+```
+git checkout tags/stepX
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+but replace the X with the step number like below:
+```
+git checkout tags/step1
+```
 
-## Code scaffolding
+### Step 1
+Initialize Repo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Step 2 
+Added two feature files
 
-## Build
+### Step 3
+Add recommended extentions
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Step 4
+Add Gherkin steps and Page Objects
 
-## Running unit tests
+### Step 5
+Added home component from UI
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Step 6
+Added unittest for input box
 
-## Running end-to-end tests
+### Step 7
+Fixed test from step 6
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Step 8
+Add unittest for button on page
 
-## Further help
+### Step 9
+Fixed unit test
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Step 10
+Adding test for submit
+
+### Step 11
+Fixed test for submit
+
+### Step 12
+Adding test for message service
+
+### Step 13
+Fixing test for messaging service
+
+### Step 14
+Adding functionality for navigation to complete first scenario from a UI standpoint.
