@@ -1,7 +1,22 @@
 # BasicMessagingUi
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.4.
-
+- [BasicMessagingUi](#basicmessagingui)
+  - [About](#about)
+    - [Step 1](#step-1)
+    - [Step 2](#step-2)
+    - [Step 3 (Can be skipped)](#step-3-can-be-skipped)
+    - [Step 4](#step-4)
+    - [Step 5](#step-5)
+    - [Step 6](#step-6)
+    - [Step 7](#step-7)
+    - [Step 8](#step-8)
+    - [Step 9](#step-9)
+    - [Step 10](#step-10)
+    - [Step 11](#step-11)
+    - [Step 12](#step-12)
+    - [Step 13](#step-13)
+    - [Step 14](#step-14)
 ## About
 This repo is made to provide a high level overview of TDD and BDD of an Angular application.  Each step below shows one process of development from writing the E2E tests to writing the unittests and fixing them.  The checkout a paticular branch run the following command:
 ```
@@ -19,7 +34,7 @@ Initialize Repo
 ### Step 2 
 Added two feature files
 
-### Step 3
+### Step 3 (Can be skipped)
 Add recommended extentions
 
 ### Step 4
